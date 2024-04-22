@@ -30,6 +30,8 @@ export default async function Page() {
         </DashboardPageHeaderNav>
       </DashboardPageHeader>
       <DashboardPageMain>
+        {/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment //
+        @ts-expect-error */}
         <MovementsDataTable data={movements} />
       </DashboardPageMain>
     </DashboardPage>

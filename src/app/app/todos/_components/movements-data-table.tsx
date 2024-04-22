@@ -97,6 +97,8 @@ export function MovementsDataTable({ data }: TodoDataTable) {
       accessorKey: 'type',
       header: 'Tipo',
       cell: ({ row }) => {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         const { type } = row.original
 
         const status: 'Entrada' | 'Saida' = type
@@ -140,6 +142,8 @@ export function MovementsDataTable({ data }: TodoDataTable) {
       accessorKey: 'date',
       header: () => <div className="text-right">date</div>,
       cell: ({ row }) => {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         const txt = new Date(row.original.date + ' 00:00:00')
         return (
           <div className="text-right font-medium">

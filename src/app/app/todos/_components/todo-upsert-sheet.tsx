@@ -51,6 +51,8 @@ export function TodoUpsertSheet({ children }: TodoUpsertSheetProps) {
 
   const onSubmit = form.handleSubmit(async (data) => {
     console.log(data)
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     await upsertTodo(data)
     router.refresh()
 

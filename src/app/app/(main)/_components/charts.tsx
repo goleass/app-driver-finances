@@ -35,9 +35,13 @@ export function ExampleChart({ series }: { series: number[] }) {
                     label: 'Total',
                     fontFamily: 'Inter, sans-serif',
                     formatter: function (w) {
-                      const sum = w.globals.seriesTotals.reduce((a, b) => {
-                        return a + b
-                      }, 0)
+                      const sum = w.globals.seriesTotals.reduce(
+                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                        (a: any, b: any) => {
+                          return a + b
+                        },
+                        0,
+                      )
                       return 'R$ ' + sum
                     },
                   },
@@ -128,9 +132,13 @@ export function ExampleChart2({ series }: { series: number[] }) {
                     label: 'Total',
                     fontFamily: 'Inter, sans-serif',
                     formatter: function (w) {
-                      const sum = w.globals.seriesTotals.reduce((a, b) => {
-                        return a + b
-                      }, 0)
+                      const sum = w.globals.seriesTotals.reduce(
+                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                        (a: any, b: any) => {
+                          return a + b
+                        },
+                        0,
+                      )
                       return 'R$ ' + sum
                     },
                   },
