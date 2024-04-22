@@ -94,6 +94,7 @@ const config = {
 
   plugins: [
     require('tailwindcss-animate'),
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
     require('flowbite/plugin')({ chart: true }),
   ],
 } satisfies Config

@@ -9,11 +9,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import {
-  LockClosedIcon,
-  MixerVerticalIcon,
-  RocketIcon,
-} from '@radix-ui/react-icons'
+import { LockClosedIcon, MixerVerticalIcon } from '@radix-ui/react-icons'
 import { Session } from 'next-auth'
 import { signOut } from 'next-auth/react'
 

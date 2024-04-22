@@ -18,7 +18,6 @@ export default async function Page() {
 
   const aplicativo = movements.filter((m) => m.category === 'Aplicativo')
   const manutencao = movements.filter((m) => m.category === 'Manutencao')
-  const aluguel = movements.filter((m) => m.category === 'Aluguel')
   const combustivel = movements.filter((m) => m.category === 'Combustivel')
 
   return (
