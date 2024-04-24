@@ -21,19 +21,6 @@ export const {
     EmailProvider({
       server: process.env.EMAIL_SERVER,
       from: process.env.EMAIL_FROM,
-      maxAge: 15 * 60, // 15 minutes
-      generateVerificationToken: () => {
-        const random = crypto.getRandomValues(new Uint8Array(8))
-        const token = Buffer.from(random).toString('hex').slice(0, 6)
-
-        return token
-      },
-      sendVerificationRequest(params) {
-        const { url } = params
-        const { host } = new URL(url)
-
-        console.log(`Sign in to ${host}\n${url}\n\n`)
-      },
     }),
   ],
   // events: {
