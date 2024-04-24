@@ -12,6 +12,7 @@ export function CustomPrismaAdapter(p: PrismaClient): Adapter {
   const origin = PrismaAdapter(p)
   return {
     ...origin,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     deleteSession: async (sessionToken: any) => {
       try {
         console.log('Deleting', { sessionToken })
