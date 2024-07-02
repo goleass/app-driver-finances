@@ -4,8 +4,6 @@ import { getUrl } from './lib/get-url'
 export function middleware(request: NextRequest) {
   const token = request.cookies.get('authjs.session-token')
 
-  console.log('opa', request.cookies, token)
-
   const pathname = request.nextUrl.pathname
 
   if (pathname === '/auth' && token) {
