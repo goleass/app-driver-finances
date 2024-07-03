@@ -68,8 +68,7 @@ export const createCheckoutSession = async (
         after_completion: {
           type: 'redirect',
           redirect: {
-            return_url:
-              `${process.env.NEXT_PUBLIC_APP_URL}/app/settings/billing?success=true`,
+            return_url: `${process.env.NEXT_PUBLIC_APP_URL}/app/settings/billing?success=true`,
           },
         },
         subscription_update_confirm: {
