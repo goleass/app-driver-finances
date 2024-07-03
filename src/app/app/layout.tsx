@@ -5,6 +5,8 @@ import { auth } from '@/services/auth'
 export default async function Layout({ children }: PropsWithChildren) {
   const session = await auth()
 
+  console.log('session Layout', session)
+
   if (!session) {
     return
   }
