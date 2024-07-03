@@ -12,7 +12,7 @@ export function AuthForm() {
 
   const handleSubmit = form.handleSubmit(async (data) => {
     try {
-      await signIn('nodemailer', { email: data.email, redirect: false })
+      await signIn('email', { email: data.email, redirect: false })
 
       toast({
         title: 'Magic Link Sent',
