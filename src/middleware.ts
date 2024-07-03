@@ -9,7 +9,6 @@ export function middleware(request: NextRequest) {
   )?.value
 
   const pathname = request.nextUrl.pathname
-  console.log('token', token, pathname)
 
   if (pathname === '/auth' && token) {
     return NextResponse.redirect(new URL(getUrl('/app')))

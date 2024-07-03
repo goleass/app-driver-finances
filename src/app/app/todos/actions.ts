@@ -113,13 +113,6 @@ export async function upsertTodo(input: z.infer<typeof upsertMovementSchema>) {
     },
   })
 
-  console.log('opa', {
-    type: input.type,
-    category: input.category,
-    date: input.date,
-    description: input.description,
-  })
-
   return todo
 }
 
