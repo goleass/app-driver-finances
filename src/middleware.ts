@@ -4,7 +4,9 @@ import { getUrl } from './lib/get-url'
 export function middleware(request: NextRequest) {
   const cookies = request.cookies.getAll()
 
-  const token = cookies.find(cookie => cookie.name.includes('authjs.session-token'))?.value
+  const token = cookies.find((cookie) =>
+    cookie.name.includes('authjs.session-token'),
+  )?.value
 
   const pathname = request.nextUrl.pathname
   console.log('token', token, pathname)
