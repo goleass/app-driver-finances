@@ -2,10 +2,12 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getUrl } from './lib/get-url'
 
 export function middleware(request: NextRequest) {
-  const token = request.cookies.get('authjs.session-token')
+  const cookies = request.cookies.getAll()
+
+  const token = cookies.find(cookie => cookie.name.includes('authjs.session-token'))?.value
 
   const pathname = request.nextUrl.pathname
-  console.log('token', token, pathname, request.cookies)
+  console.log('token', token, pathname)
 
   if (pathname === '/auth' && token) {
     return NextResponse.redirect(new URL(getUrl('/app')))
