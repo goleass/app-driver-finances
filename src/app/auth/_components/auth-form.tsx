@@ -19,6 +19,7 @@ export function AuthForm() {
         description: 'Check your email for the magic link to login',
       })
     } catch (error) {
+      console.log(error)
       toast({
         title: 'Error',
         description: 'An error occurred. Please try again.',
