@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Toaster } from '@/components/ui/toaster'
 import { ThemeProvider } from './_components/theme-provider'
-import { SessionProvider } from "next-auth/react";
+import { SessionProvider } from 'next-auth/react'
 
 import './globals.css'
 

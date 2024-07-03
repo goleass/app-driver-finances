@@ -1,11 +1,11 @@
 import NextAuth from 'next-auth'
 import EmailProvider from 'next-auth/providers/email'
 
-import { PrismaAdapter } from "@next-auth/prisma-adapter"
+import { PrismaAdapter } from '@next-auth/prisma-adapter'
 import { prisma } from '../database'
 // import { createStripeCustomer } from '../stripe'
 
-export const { handlers, auth, } = NextAuth({
+export const { handlers, auth } = NextAuth({
   pages: {
     signIn: '/auth',
     // signOut: '/auth',
@@ -29,9 +29,9 @@ export const { handlers, auth, } = NextAuth({
   callbacks: {
     session: async ({ session, user }) => {
       if (session?.user) {
-        session.user.id = user.id;
+        session.user.id = user.id
       }
-      return session;
+      return session
     },
   },
   // events: {
